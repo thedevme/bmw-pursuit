@@ -9,6 +9,14 @@ import Foundation
 import SwiftUI
 
 class CarViewModel: ObservableObject {
+    let carColors = ["black", "grey", "red", "white"]
     
+    @Published var selectedCarColorIndex = 0
+    @Published var colors: [Color] = [
+        .black,
+        .baseDarkGrey,
+        .baseRed,
+        .white
+    ]
     
 }

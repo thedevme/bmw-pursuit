@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct CarView: View {
+    @EnvironmentObject var model: CarViewModel
+    
+    let image: String
+    let index: Int
+    
     var body: some View {
-        Text("Car View")
+        Image(image)
+            .opacity(self.model.selectedCarColorIndex == index ? 1 : 0)
     }
 }
 
 struct CarView_Previews: PreviewProvider {
     static var previews: some View {
-        CarView()
+        CarView(image: "white", index: 0)
     }
 }
